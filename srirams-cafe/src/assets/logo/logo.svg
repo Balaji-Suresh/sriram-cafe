@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="#ffffff" stroke="#28a745" stroke-width="6"/>
+  <text x="100" y="90" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#28a745">Sri Ram's</text>
+  <text x="100" y="120" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#28a745">Cafe</text>
+  <path d="M60,140 C80,130 120,130 140,140" stroke="#28a745" stroke-width="3" fill="none"/>
+</svg>
