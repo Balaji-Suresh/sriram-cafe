@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom">
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img src={logo} alt="Sri Ram's Cafe Logo" height="40" className="me-2" />
@@ -36,8 +36,7 @@ const Navbar = () => {
             <li className="nav-item"><Link className="nav-link" to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/menu" onClick={() => setIsOpen(false)}>Menu</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/testimonials" onClick={() => setIsOpen(false)}>Testimonials</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/subscription" onClick={() => setIsOpen(false)}>Subscribe</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/account" onClick={() => setIsOpen(false)}>My Account</Link></li>
           </ul>

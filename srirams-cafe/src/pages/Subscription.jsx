@@ -63,7 +63,7 @@ const Subscription = () => {
           >
             <h5>Monthly</h5>
             <p>Perfect for trying out our service</p>
-            <h6>₹2,500/month</h6>
+            <h6>₹5000/month</h6>
           </div>
           
           <div 
@@ -72,7 +72,7 @@ const Subscription = () => {
           >
             <h5>Quarterly</h5>
             <p>Our most popular option</p>
-            <h6>₹7,000/quarter</h6>
+            <h6>₹14500/quarter</h6>
             <small className="text-success">Save ₹500</small>
           </div>
           
@@ -82,8 +82,8 @@ const Subscription = () => {
           >
             <h5>Annual</h5>
             <p>Best value for loyal customers</p>
-            <h6>₹25,000/year</h6>
-            <small className="text-success">Save ₹5,000</small>
+            <h6>₹58,000/year</h6>
+            <small className="text-success">Save ₹2,000</small>
           </div>
         </div>
         

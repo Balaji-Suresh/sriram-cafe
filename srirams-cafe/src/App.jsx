@@ -5,8 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import About from "./pages/About";
-import Gallery from "./pages/Gallery";
-import Contact from "./pages/Contact";
+import Testimonials from "./pages/Testimonials";
 import Login from "./pages/Login";
 import Account from "./pages/Account";
 import Subscription from "./pages/Subscription";
@@ -45,12 +44,8 @@ const router = createBrowserRouter([
     element: <Layout><About /></Layout>
   },
   {
-    path: "/gallery",
-    element: <Layout><Gallery /></Layout>
-  },
-  {
-    path: "/contact",
-    element: <Layout><Contact /></Layout>
+    path: "/testimonials",
+    element: <Layout><Testimonials /></Layout>
   },
   {
     path: "/account",

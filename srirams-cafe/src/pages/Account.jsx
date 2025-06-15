@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import MapPicker from "../components/MapPicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Account = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -51,15 +52,32 @@ const Account = () => {
     }));
     setMapLocation(location);
   };
+  
+  const handleLogout = () => {
+    // In a real app, you would clear authentication tokens/cookies here
+    // For now, we'll just redirect to the login page
+    if (window.confirm("Are you sure you want to log out?")) {
+      navigate("/login");
+    }
+  };
 
   return (
     <div className="page-container">
       <h1 className="page-title mt-0">My Account</h1>
       
+      <div className="d-flex justify-content-end mb-3">
+        <button 
+          className="btn btn-outline-danger logout-btn" 
+          onClick={handleLogout}
+        >
+          <i className="bi bi-box-arrow-right me-1"></i> Logout
+        </button>
+      </div>
+      
       <div className="cards-container">
         <div className="form-card">
           <h4>Personal Information</h4>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="personal-info-form">
             <div className="mb-3">
               <label htmlFor="name" className="form-label">Full Name</label>
               <input
@@ -112,13 +130,15 @@ const Account = () => {
                     onChange={handleChange}
                     required
                   ></textarea>
-                  <button 
-                    type="button" 
-                    className="btn btn-outline-primary btn-sm"
-                    onClick={() => setShowMap(true)}
-                  >
-                    <i className="bi bi-geo-alt"></i> Pick from Map
-                  </button>
+                  <div className="text-center">
+                    <button 
+                      type="button" 
+                      className="btn btn-outline-primary btn-sm"
+                      onClick={() => setShowMap(true)}
+                    >
+                      <i className="bi bi-geo-alt"></i> Pick from Map
+                    </button>
+                  </div>
                 </>
               ) : (
                 <>
@@ -134,7 +154,7 @@ const Account = () => {
               )}
             </div>
             
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between flex-wrap gap-2">
               <button type="submit" className="btn btn-green">Save Changes</button>
               <Link to="/subscription" className="btn btn-outline-success">Manage Subscription</Link>
             </div>
@@ -143,7 +163,7 @@ const Account = () => {
         
         <div className="form-card">
           <h4>Lunch Delivery Management</h4>
-          <div className="flex-grow-1 d-flex flex-column justify-content-center">
+          <div className="flex-grow-1 d-flex flex-column justify-content-center delivery-management">
           {!showPauseForm ? (
             <div className="text-center">
               <p className="mb-4">You can temporarily pause your lunch delivery service when you're away.</p>
@@ -155,9 +175,9 @@ const Account = () => {
               </button>
             </div>
           ) : (
-          <form onSubmit={handlePauseSubmit}>
+          <form onSubmit={handlePauseSubmit} className="pause-form">
             <div className="row mb-3">
-              <div className="col-md-6">
+              <div className="col-md-6 mb-3 mb-md-0">
                 <label className="form-label">Pause From</label>
                 <DatePicker
                   selected={pauseStartDate}
@@ -184,7 +204,7 @@ const Account = () => {
               </div>
             </div>
             
-            <div className="d-flex gap-2">
+            <div className="d-flex gap-2 justify-content-center">
               <button type="submit" className="btn btn-warning">Confirm Pause</button>
               <button 
                 type="button" 
