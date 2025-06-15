@@ -17,6 +17,200 @@ footer {
   margin-top: auto;
 }
 
+/* Login page styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  background-color: rgba(240, 240, 240, 0.5);
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/Main Logo.jpeg');
+  background-size: contain;
+  background-position: 15% center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.login-form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Account and Subscription page styles */
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-title {
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.form-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  flex: 1;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card h4 {
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.map-container {
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+}
+
+.location-search {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.location-search input {
+  padding-right: 40px;
+}
+
+.location-search button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.subscription-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subscription-option {
+  flex: 1;
+  min-width: 150px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscription-option:hover {
+  border-color: #4CAF50;
+}
+
+.subscription-option.selected {
+  border-color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.date-picker-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Button styles */
+.btn-green {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+  color: white !important;
+}
+
+.btn-green:hover {
+  background-color: #45a049 !important;
+  border-color: #45a049 !important;
+  color: white !important;
+}
+
+/* Home page styles */
+.welcome-heading {
+  color: #4CAF50;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.carousel-container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-image {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.background-logo {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 4rem auto;
+}
+
 /* Mobile menu styles */
 @media (max-width: 991.98px) {
   .navbar-collapse {
@@ -46,28 +240,8 @@ footer {
     background-position: center;
     background-size: 100%;
   }
-}
-
-/* Home page styles */
-.background-logo {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 800px;
-  height: auto;
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.home-content {
-  position: relative;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 4rem auto;
+  
+  .cards-container {
+    flex-direction: column;
+  }
 }

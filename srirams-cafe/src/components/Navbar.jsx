@@ -38,6 +38,8 @@ const Navbar = () => {
             <li className="nav-item"><Link className="nav-link" to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/subscription" onClick={() => setIsOpen(false)}>Subscribe</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/account" onClick={() => setIsOpen(false)}>My Account</Link></li>
           </ul>
         </div>
       </div>
